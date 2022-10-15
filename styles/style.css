@@ -1,6 +1,9 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
+* {
+  box-sizing: border-box;
+}
 header {
   display: flex;
   justify-content: center;
@@ -9,13 +12,41 @@ header {
   height: 100vh;
   padding: 2rem;
 }
-* {
-  box-sizing: border-box;
+.header-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.class::before {
+  content: "";
+}
+.class::after {
+  content: "";
+}
+.header-link::after {
+  content: "";
+  width: 0;
+  height: 0;
+  margin-left: 1rem;
+  border-left: 0.5rem solid transparent;
+  border-right: 0.5rem solid transparent;
+  border-top: 0.75rem solid var(--primary);
+}
+.header-link:hover::after {
+  border-top-color: white;
+  transition: all 0.3s ease-in-out;
+}
+.header-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 h1 {
-  font-size: 5vw;
-  line-height: 1.4em;
-  margin-bottom: 2rem;
+    margin-bottom: var(--spacing);
+    font-size: clamp(3rem, 5vw, 200rem);
+    font-weight: bold;
+    line-height: 1.4em;
+    color: var(--dk-grey);
 }
 .button {
   display: inline-block;
@@ -33,6 +64,10 @@ h1 {
 }
 :root {
   --primary: red;
+  --dk-grey: #333;
+--max-width: 960px;
+--spacing: 4rem;
+--img-width: 350px;
 }
 --- rest of css --- .button {
   padding: 1rem;
@@ -42,10 +77,22 @@ h1 {
   color: var(--primary);
 }
 .about {
-  padding: 4rem;
+/* padding: 4rem;
   color: white;
-  background-color: var(--primary);
+  background-color: var(--primary); */
+  position: relative;
+margin-bottom: 100px;
 }
+.about::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -100px;
+    width: 0;
+    height: 0;
+    border-top: 100px solid var(--primary);
+    border-right: 100vw solid transparent;
+    }
 --- place under h1 --- h2 {
   text-align: center;
   font-size: 3vw;
@@ -109,8 +156,20 @@ article {
   margin-bottom: 2rem;
 }
 .contact {
+    position: relative;
+margin-top: 100px;
   text-align: center;
 }
+.contact::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -100px;
+    width: 0;
+    height: 0;
+    border-bottom: 100px solid var(--primary);
+    border-left: 100vw solid transparent;
+    }
 footer {
   padding: var(--spacing);
   text-align: center;
@@ -136,10 +195,9 @@ footer {
   background: no-repeat;
   background-size: 30px;
 }
-.social-link:hover{
-    transform: scale(1.2);
-   transition: transform 0.3s ease-in;
-   
+.social-link:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s ease-in;
 }
 .linkedin {
   background-image: url(../images/icon-linkedin.png);
