@@ -18,7 +18,7 @@ h1 {
   margin-bottom: 2rem;
 }
 .button {
-  display: block;
+  display: inline-block;
   width: max-content;
   padding: 1rem;
   border: 2px solid var(--button-color);
@@ -29,6 +29,7 @@ h1 {
 .button:hover {
   color: var(--button-hover-color);
   background-color: var(--button-color);
+  transition: all 0.3s ease-in-out;
 }
 :root {
   --primary: red;
@@ -105,23 +106,65 @@ article {
   flex-direction: column-reverse;
 }
 .article-img {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
+}
+.contact {
+  text-align: center;
+}
+footer {
+  padding: var(--spacing);
+  text-align: center;
+  background-color: #333;
+  color: white;
+}
+.social {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--spacing);
+}
+.social-item {
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 10px;
+  margin: 0 2rem;
+}
+.social-link {
+  display: block;
+  width: 30px;
+  height: 30px;
+  font-size: 0px;
+  background: no-repeat;
+  background-size: 30px;
+}
+.social-link:hover{
+    transform: scale(1.2);
+   transition: transform 0.3s ease-in;
+   
+}
+.linkedin {
+  background-image: url(../images/icon-linkedin.png);
+}
+.twitter {
+  background-image: url(../images/icon-twitter.png);
+}
+.github {
+  background-image: url(../images/icon-github.png);
 }
 @media (min-width: 800px) {
-    .about-container {
-      display: flex;
-    }
-    .about-text {
-      margin-left: var(--spacing);
-    }
-    article{
-        flex-direction: row;
-        max-width: 960px;
-        margin: 0 auto var(--spacing);
-    }
-    .article-img {
-margin-left: 2rem;
-max-width: 350px;
-object-fit: cover;
-    }
+  .about-container {
+    display: flex;
   }
+  .about-text {
+    margin-left: var(--spacing);
+  }
+  article {
+    flex-direction: row;
+    max-width: 960px;
+    margin: 0 auto var(--spacing);
+  }
+  .article-img {
+    margin-left: 2rem;
+    max-width: 350px;
+    object-fit: cover;
+  }
+}
