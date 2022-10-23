@@ -1,185 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shirlene Portfolio</title>
-    <link rel="stylesheet" href="styles/reset.css" />
-    <link rel="stylesheet" href="styles/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="favicon.ico" />
+
+    <title>My Portfolio</title>
+
+    <!-- meta tags for SEO and social sharing -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
-      rel="stylesheet"/>
+      rel="canonical"
+      href="https://github.com/ShirleneNait"
+    />
+    <meta name="description" content="My Portfolio" />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:title" content="AtomicFox Portfolio" />
+    <meta property="og:type" content="article" />
+    <!-- <meta property="og:url" content="your url here" /> -->
+    <meta property="og:description" content="My Portfolio" />
 
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-<link rel="manifest" href="images/site.webmanifest">
+    <!-- import bootstrap library-->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
 
-<script src="script.js"></script>
+    <!-- import font-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
 
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="styles/style.css" />
+
+    <!-- import the webpage's javascript file -->
+    <script src="script.js" defer></script>
   </head>
+
   <body>
-    <header class="header">  <!--"neutral-theme"-->
-      <div class="header-nav">
-<nav>
-  <ul class="header-links">
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#contacts">Contacts</a></li>
-  </ul>
-</nav>
-<button class="button button-secondary">Change Theme</button>
+    <div class="header-content">
+      <div class="header-logo">
+        <img src="images/logo.png" alt="Logo Image" />
       </div>
-<div class="header_content">
-  <h1 class="header-title">
-    Hello! My name is <span>Shirlene Nait Aruwa</span>. <br />
-    I'm a Web Developer.
-  </h1>
-  <a href="#about" class="button button-primary button-medium">Find out more</a> <!--header-link button-->
-</div>
-    </header>
-    <main>
-      <section id="about" class="about primary-theme">
-        <h2>About Me</h2>
-        <div class="about-container">
-          <img
-            src="images/nait.jpg"
-            class="about-img"
-            alt="a photograpgh of Shirlene"
-            width="200"
-          />
-          <div class="about-text">
+      <div class="d-flex align-items-center">
+        <nav class="header-navigation">
+          <ul class="header-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contacts">Contacts</a></li>
+          </ul>
+        </nav>
+        <button class="button button-secondary-rounded" id="change-theme">
+          Change theme
+        </button>
+      </div>
+    </div>
+    <!-- the wrapper and content divs set margins and positioning -->
+    <div class="wrapper">
+      <div class="container" role="main">
+        <!-- this is the start of content for our page -->
+        <section class="row intro">
+          <div class="col-xs-12 col-sm-12 col-md-6">
+            <h1 class="title">Hello, my name is Shirlene Aruwa</h1>
             <p>
-              I am a Business Information and Technology student, at St Paul’s
-              University in Nairobi Kenya, currently awaiting graduation.
-              Through this course, I was able to gain interest in web
-              development as I did some practice as part of my coursework.
+              I'm a
+              <span> Web developer </span>
+              focused on developing websites that offer a great experience overall.
             </p>
-            <p>
-              I am a dedicated, methodical, and organized individual with
-              excellent communication abilities. I am great at developing
-              innovative solutions to problems and advocating for a win-win
-              situation. I'm always keen to learn new things and face new
-              difficulties.
-            </p>
-            <p>
-              Fun fact! I am a very creative individual as I am blessed with an
-              artistic side. As part of my part time activities I engage in
-              woodworking, upholstery, hairdressing or garment construction
-              amongst many others as they let me exercise my creative side. This
-              also translates into my web development journey as the front-end
-              aspect of it triggers my creativity. Therefore, having an
-              opportunity to create something beautiful from scratch gives me
-              joy.
-            </p>
-            <a href="#" class="button">My Resume</a>
+            <a href="https://github.com/ShirleneNait" class="button button-primary"> Github </a>
+            <a href="https://www.linkedin.com/in/shirlene-nait-460b7a209" class="button button-secondary"> LinkedIn </a>
           </div>
-        </div>
-        <blockquote>
-          “Do not wait for inspiration. It comes while working."
-        </blockquote>
-        <cite>Henri Matisse</cite>
-      </section>
-      <section id="projects" class="neutral-theme">
-        <h2>Projects</h2>
-        <article>
-          <div class="article-text">
-            <h3>My first Portfolio</h3>
-            <p>
-              This project was my first attempt at creating a portfolio and
-              linking it to GitHub. I managed to work with bootstrap and
-              appreciate the work of fellow programmers as most of the codes
-              were borrowed.
-            </p>
-            <a
-              href="https://github.com/ShirleneNait/ShirleneNait.github.io.git"
-              class="button"
-              >See it live</a
-            >
-            <a
-              href="https://github.com/ShirleneNait/ShirleneNait.github.io.git"
-              class="button"
-              >fork it on GitHub</a
-            >
+          <div class="col-sm-12 col-md-6">
+            <img
+              src="images/nait.jpg"
+              alt="image of shirlene"
+              class="intro-img"
+            />
           </div>
-          <img src="images/portfolio1.png" class="article-img" />
-        </article>
-        <article>
-          <div class="article-text">
-            <h3>Building a Terrarium</h3>
-            <p>
-              This project was carried out during my sessions with front-End
+        </section>
+        <!-- About -->
+        <section class="row about" id="about">
+          <div class="col-12">
+            <h2 class="heading">About me</h2>
+          </div>
+          <div class="col-sm-12 col-lg-6">
+            <div class="about-img">
+              <img src="images/nait.jpg" alt="image of shirlene" />
+            </div>
+          </div>
+          <div class="col-sm-12 col-lg-6 d-flex align-items-center flex-column">
+            <p class="about-text">
+              <p>
+                I am a Business Information and Technology student, at St Paul’s
+                University in Nairobi Kenya, currently awaiting graduation.
+                Through this course, I was able to gain interest in web
+                development as I did some practice as part of my coursework.
+              </p>
+              <p>
+                I am a dedicated, methodical, and organized individual with
+                excellent communication abilities. I am great at developing
+                innovative solutions to problems and advocating for a win-win
+                situation. I'm always keen to learn new things and face new
+                difficulties.
+              </p>
+              <p>
+                Fun fact! I am a very creative individual as I am blessed with an
+                artistic side. As part of my part time activities I engage in
+                woodworking, upholstery, hairdressing or garment construction
+                amongst many others as they let me exercise my creative side. This
+                also translates into my web development journey as the front-end
+                aspect of it triggers my creativity. Therefore, having an
+                opportunity to create something beautiful from scratch gives me
+                joy.
+              </p>
+            </p>
+            <div class="text-center" id="motivato"></div>
+            <br />
+            <button class="button button-secondary" onclick="motivateMe()">
+              Next quote
+            </button>
+          </div>
+        </section>
+        <!-- Projects -->
+        <section class="projects" id="projects">
+          <div class="row">
+            <div class="col-12">
+              <h2 class="heading">Projects</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-4 mb-5">
+              <div class="project-card">
+                <div class="project-card-image">
+                  <img src="images/portfolio1.png" />
+                </div>
+                <div class="project-card-content">
+                  <h3 class="project-card-title">First Portfolio</h3>
+                  <p class="project-card-text">
+                    This project was my first attempt at creating a portfolio and
+                    linking it to GitHub. I managed to work with bootstrap and
+                    appreciate the work of fellow programmers as most of the codes
+                    were borrowed.
+                  </p>
+                  <a href="https://github.com/ShirleneNait/ShirleneNait.github.io.git" class="button button-secondary-rounded"> View Project </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 mb-5">
+              <div class="project-card">
+                <div class="project-card-image">
+                  <img src="images/terrarium.png" />
+                </div>
+                <div class="project-card-content">
+                  <h3 class="project-card-title">My Online Terrarium</h3>
+                  <p class="project-card-text">
+                    This project was carried out during my sessions with front-End
               Foxes. It gave me an opportunity to work with javascript and see
               how it enables interaction. This is seen through the dragging of
               the plant elements into the jar.
-            </p>
-            <a
-              href="https://github.com/ShirleneNait/TERRARIUM.git"
-              class="button"
-              >See it live</a
-            >
-            <a
-              href="https://github.com/ShirleneNait/TERRARIUM.git"
-              class="button"
-              >fork it on GitHub</a
-            >
-          </div>
-          <img src="images/terrarium.png" class="article-img" />
-        </article>
-        <article>
-          <div class="article-text">
-            <h3>Pet Adoption System</h3>
-            <p>
-              This is a project I am currently undertaking. The idea at hand is
+                  </p>
+                  <a href="https://github.com/ShirleneNait/TERRARIUM.git"
+                   class="button button-secondary-rounded"> View Project </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 mb-5">
+              <div class="project-card">
+                <div class="project-card-image">
+                  <img src="images/ipet.png" />
+                </div>
+                <div class="project-card-content">
+                  <h3 class="project-card-title">Pet Adoption System</h3>
+                  <p class="project-card-text">
+                    This is a project I am currently undertaking. The idea at hand is
               to create a pet adoption system. This will create a platform where
               pet owners will be able to sell or donate their pets to loving
               homes and people looking for pets can be able to spot them easily.
-            </p>
-            <a
-              href="https://github.com/ShirleneNait/Pet_adoption_system.git"
-              class="button"
-              >See it live</a
-            >
-            <a
-              href="https://github.com/ShirleneNait/Pet_adoption_system.git"
-              class="button"
-              >fork it on GitHub</a
-            >
+                  </p>
+                  <a   href="https://github.com/ShirleneNait/Pet_adoption_system.git"
+                   class="button button-secondary-rounded"> View Project </a>
+                </div>
+              </div>
+            </div>
           </div>
-          <img src="images/ipet.png" class="article-img" />
-        </article>
-      </section>
-      <section id="contacts" class="contact primary-theme">
-        <h2>Contact</h2>
-        <p>If you would like to know more,</p>
-        <a href="mailto:shirlruwa@gmail.com" class="button">Let's talk</a>
-      </section>
-    </main>
-    <footer>
-      <ul class="social">
-        <li class="social-item">
-          <a
-            class="social-link linkedin"
-            href="https://www.linkedin.com/in/shirlene-nait-460b7a209"
-            >linkedin</a
-          >
-        </li>
-        <li class="social-item">
-          <a
-            class="social-link twitter"
-            href="https://twitter.com/Shirlene_Nait"
-            >Twitter</a
-          >
-        </li>
-        <li class="social-item">
-          <a class="social-link github" href="https://github.com/ShirleneNait"
-            >GitHub</a
-          >
-        </li>
-      </ul>
-      <p>&copy;2022 - Portfolio Design by Maria Albertina</p>
+        </section>
+        <section class="contacts" id="contacts">
+          <div class="row">
+            <div class="col-12">
+              <h2 class="heading">Contacts</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-md-8 offset-md-2">
+              <!-- <p>
+                💌 Feel free to get in touch with me by
+                <a href="mailto:vossoemailaqui">Email</a> 💌
+              </p> -->
+              <form action="mailto:shirlruwa@gmail.com" method="post">
+                <div class="form-group">
+                  <label for="inputName">Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputName"
+                    placeholder="Enter your name"
+                    name="name"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="exampleInputEmail1"
+                    placeholder="Enter email"
+                    name="email"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlTextarea1">Message</label>
+                  <textarea
+                    class="form-control"
+                    id="exampleFormControlTextarea1"
+                    rows="3"
+                    name="text"
+                  ></textarea>
+                </div>
+                <div class="text-right">
+                  <button type="submit" class="button button-primary">
+                    Submit
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="text-center">
+        <a href="https://github.com/ShirleneNait" class="social github"></a>
+        <a href="https://twitter.com/Shirlene_Nait" class="social twitter"></a>
+        <a href="https://www.linkedin.com/in/shirlene-nait-460b7a209" class="social linkedin"></a>
+      </div>
     </footer>
   </body>
 </html>
