@@ -22,12 +22,23 @@
 
   </head>
   <body>
-    <header class="neutral-theme">
-      <h1>
-        Hello! My name is <span>Shirlene Nait Aruwa</span>. <br />
-        I'm a Web Developer.
-      </h1>
-      <a href="#about" class="header-link button">Find out more</a>
+    <header class="header">  <!--"neutral-theme"-->
+      <div class="header-nav">
+<nav>
+  <ul class="header-links">
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contacts">Contacts</a></li>
+  </ul>
+</nav>
+<button class="button button-secondary">Change Theme</button>
+      </div>
+<div class="header_content">
+  <h1 class="header-title">
+    Hello! My name is <span>Shirlene Nait Aruwa</span>. <br />
+    I'm a Web Developer.
+  </h1>
+  <a href="#about" class="button button-primary button-medium">Find out more</a> <!--header-link button-->
+</div>
     </header>
     <main>
       <section id="about" class="about primary-theme">
@@ -71,7 +82,7 @@
         </blockquote>
         <cite>Henri Matisse</cite>
       </section>
-      <section class="neutral-theme">
+      <section id="projects" class="neutral-theme">
         <h2>Projects</h2>
         <article>
           <div class="article-text">
@@ -140,7 +151,7 @@
           <img src="images/ipet.png" class="article-img" />
         </article>
       </section>
-      <section class="contact primary-theme">
+      <section id="contacts" class="contact primary-theme">
         <h2>Contact</h2>
         <p>If you would like to know more,</p>
         <a href="mailto:shirlruwa@gmail.com" class="button">Let's talk</a>

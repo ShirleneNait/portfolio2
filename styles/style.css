@@ -13,6 +13,28 @@ header {
   height: 100vh;
   padding: 2rem;
 }
+.header-nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 70px;
+  background-color: var(--color-primary);
+  padding: 0 35px; 
+}
+.header-links {
+  display: none;
+ } 
+ .header-links li {
+  margin-right: 20px;
+ } 
+ .header-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+ } 
 .header-link {
   display: flex;
   align-items: center;
@@ -234,3 +256,10 @@ footer {
     object-fit: cover;
   }
 }
+@media (min-width: 992px) {
+  .header-links {
+    display: flex;
+    color: var(--color-text-secondary);
+  }
+ }
+ 
